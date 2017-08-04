@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calendar</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link type="text/css" rel="stylesheet" href="styles.css">
+        <script type="text/javascript" src="script.js"></script>
+    </head>
+    <body>
+    <div class="row jumbotron">
+    	<div class="col-xs-12">
+		    <form >
+		    <div class="form-group col-xs-3">
+		    	<label for="initial_date">Fecha de inicio:</label>
+		    	<input type="date" class="form-control" name="initial_date" id="initial_date" value="2017-08-03" required>
+		    </div>
+		    <div class="form-group col-xs-3">
+		    <label for="days">Días a agregar:</label>
+		    	<input type="number" class="form-control" name="days" id="days" placeholder="1" min="1" required>
+		    </div>
+			<div class="form-group col-xs-3">
+				<label for="country_code">Código del país:</label>
+				<input type="text" class="form-control" name="country_code" id="country_code" placeholder="VE" maxlength="2">
+			</div>
+			<div class="col-xs-3">
+				<br>
+				<button type="button" class="btn btn-success" onclick="calculate()">Buscar</button>
+			</div>	
+			</form>
+		</div>
+	</div>
+        <div id="calendar-container row">
+            <div id="calendar-dates" class="well col-xs-12">
+            </div>
+        </div>
+    </body>
+</html>
